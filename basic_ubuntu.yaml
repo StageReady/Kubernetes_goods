@@ -13,4 +13,5 @@ spec:
     imagePullPolicy: IfNotPresent
     name: ubuntu
   restartPolicy: Always
-  #run apt install -y iputils-ping dnsutils curl net-tools wget traceroute once you are in the container to test network connectivity.
+  #apt install -y iputils-ping dnsutils curl net-tools wget traceroute iproute2
+  #once you are in the container to test network connectivity.
