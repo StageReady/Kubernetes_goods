@@ -6,4 +6,14 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 172.28.30.240-172.28.30.249
+  - IP-RANGE
+
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: my-l2-advertisement
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - my-ip-pool
