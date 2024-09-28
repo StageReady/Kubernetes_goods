@@ -20,12 +20,7 @@ spec:
           image: nginx:1.26.2
           ports:
             - containerPort: 8080
-              protocol: TCP
-  strategy:
-  type: RollingUpdate
-  rollingUpdate:
-    maxSurge: 1
-    maxUnavailable: 1
+              protocol: TCP  
           readinessProbe:
             httpGet:
               path: /
@@ -45,3 +40,8 @@ spec:
         runAsUser: 1001
         runAsGroup: 1001
         runAsNonRoot: true
+        strategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 1
