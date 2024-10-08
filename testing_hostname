@@ -1,0 +1,8 @@
+kubectl run dnsutils --image=tutum/dnsutils --restart=Never -i --tty
+
+nslookup service-name.namespace
+dig service-name.namespace
+
+kubectl run curlpod --image=radial/busyboxplus:curl --restart=Never -i --tty
+
+curl service-name.namespace
