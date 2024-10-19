@@ -15,7 +15,7 @@ spec:
         app: nginx-1
     spec:
         containers:
-      - name: venera-container
-        image: ombudsmanprime/website:1.0
-        ports:
-        - containerPort: 80
+        - name: venera-container
+          image: ombudsmanprime/website:1.0
+          ports:
+          - containerPort: 80
