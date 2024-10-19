@@ -14,8 +14,8 @@ spec:
       labels:
         app: nginx-1
     spec:
-        containers:
+      containers:
         - name: venera-container
           image: ombudsmanprime/website:1.0
           ports:
-          - containerPort: 80
+            - containerPort: 80
