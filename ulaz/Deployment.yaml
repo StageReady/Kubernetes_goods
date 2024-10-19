@@ -19,8 +19,3 @@ spec:
         image: ombudsmanprime/website:1.0
         ports:
         - containerPort: 80
-      - name: php-fpm-container
-        image: php:7.4-fpm
-        volumeMounts:
-        - name: website-content
-          mountPath: /usr/share/nginx/html
