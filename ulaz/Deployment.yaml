@@ -14,17 +14,9 @@ spec:
       labels:
         app: nginx-1
     spec:
-      containers:
-      - name: venera-container
-        image: ombudsmanprime/website:1.0
-        ports:
-        - containerPort: 80
-        volumeMounts:
-        - name: website-content
-          mountPath: /usr/share/nginx/html
-		- name: php-fpm-container
-        image: php:7.4-fpm
-      volumes:
-      - name: website-content
-        persistentVolumeClaim:
-          claimName: website-pvc
+        containers:
+        - name: nginx
+          image: ombudsmanprime/website:1.0
+          ports:
+            - containerPort: 80
+              protocol: TCP
