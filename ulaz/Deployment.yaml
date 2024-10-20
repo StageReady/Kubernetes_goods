@@ -19,7 +19,7 @@ spec:
         image: privatebin/nginx-fpm-alpine:latest
         volumeMounts:
         - name: website-content
-          mountPath: /var/lib/nginx/html/1
+          mountPath: /var/lib/nginx/html
         ports:
         - containerPort: 80
       volumes:
