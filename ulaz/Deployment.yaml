@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: venera-container
-          image: ombudsmanprime/website:1.0
+          image: nginx:latest
           ports:
             - containerPort: 80
