@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: venera-site
-        image: privatebin/nginx-fpm-alpine:latest
+        image: nginx:latest
         volumeMounts:
         - name: website-content
-          mountPath: /var/lib/nginx/html
+          mountPath: /usr/share/nginx/html
         ports:
         - containerPort: 80
       volumes:
