@@ -15,7 +15,14 @@ spec:
         app: nginx-1
     spec:
       containers:
-        - name: venera-container
-          image: nginx:latest
-          ports:
-            - containerPort: 80
+      - name: venera-site
+        image: privatebin/nginx-fpm-alpine:latest
+        volumeMounts:
+        - name: website-content
+          mountPath: /usr/share/nginx/html 
+        ports:
+        - containerPort: 80
+      volumes:
+      - name: website-content
+        persistentVolumeClaim:
+          claimName: website-pvc
